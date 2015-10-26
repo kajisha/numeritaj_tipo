@@ -25,7 +25,7 @@ Or install it yourself as:
 ### ActiveRecord
 ```ruby
 class User < ActiveRecord::Base
-  include NumeritajTipo
+  include NumeritajTipo::ActiveRecord
 
   enumerize :role, values: %i(admin user), type: Symbol, default: :user
 end
@@ -35,7 +35,7 @@ end
 ```ruby
 class User
   include Mongoid::Document
-  include NumeritajTipo
+  include NumeritajTipo::Mongoid
 
   field :name
   enumerize :role, values: %i(admin user), type: Symbol, default: :user
@@ -46,7 +46,7 @@ end
 ```ruby
 class User
   include Neo4j::ActiveNode
-  include NumeritajTipo
+  include NumeritajTipo::Neo4j
 
   property :name
   enumerize :role, values: %i(admin user), type: Symbol, default: :user
@@ -91,6 +91,8 @@ will generate enum classes under `app/enums`.
 * using enum
 ```ruby
 class User < ActiveRecord::Base
+  include NumeritajTipo::ActiveRecord
+
   enumerize :role, type: 'Role', default: :user
 end
 ```
