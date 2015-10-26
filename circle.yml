@@ -1,0 +1,16 @@
+machine:
+  services:
+    - mongodb
+  ruby:
+    version: 2.2.3
+
+database:
+  override:
+    - bundle exec rake neo4j:install\[community-2.3.0,development\]
+    - bundle exec rake neo4j:config\[development,7475\]
+    - bundle exec rake neo4j:start_no_wait
+    - sleep 5
+
+test:
+  override:
+    - bundle exec rspec
