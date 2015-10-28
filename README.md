@@ -53,6 +53,17 @@ class User
 end
 ```
 
+#### enumerize options
+* values:
+  * enum values range.
+  * values should be Symbol values list.
+* type:
+  * enum type (describe below).
+* default:
+  * default value of the attribute.
+* allow_nil
+  * if `true` allow the null value, it doesn't allow in the case of `false`.
+
 #### predicate methods
 ```ruby
 user = User.create
@@ -86,7 +97,7 @@ User.user.count
 $ rails g enum Role admin user
 ```
 
-will generate enum classes under `app/enums`.
+will generate enum classes under `app/enums`:
 
 * using enum
 ```ruby
