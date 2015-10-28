@@ -21,7 +21,7 @@ module NumeritajTipo
         def type_cast(value)
           return nil if value.nil?
 
-          @enum_class.build(value)
+          @enum_class.build(value.to_sym)
         end
       end
     end
