@@ -9,6 +9,7 @@ ActiveRecord::Base.connection.instance_eval do
     t.string :name
     t.string :role, null: false
     t.string :payment_status, null: false
+    t.string :nullable
   end
 end
 
@@ -18,7 +19,8 @@ module AR
 
     include NumeritajTipo::ActiveRecord
 
-    enumerize :role, values: %i(admin user), type: Symbol, default: :user
+    enumerize :role, values: %i(admin user), default: :user
     enumerize :payment_status, type: 'PaymentStatus', default: :pending
+    enumerize :nullable, values: %i(some_value), allow_nil: true
   end
 end

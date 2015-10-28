@@ -9,4 +9,5 @@ class Neo4jUser
   property :name
   enumerize :role, values: %i(admin user), default: :user
   enumerize :payment_status, type: 'PaymentStatus', default: :pending
+  enumerize :nullable, values: %i(some_value), allow_nil: true
 end

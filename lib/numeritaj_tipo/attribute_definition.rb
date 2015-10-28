@@ -4,10 +4,11 @@ module NumeritajTipo
 
     delegate :type, :enum_values, :values_for_validation, to: :@enum_type
 
-    def initialize(name, values: nil, type: Symbol, default: nil)
+    def initialize(name, values: nil, type: Symbol, default: nil, allow_nil: false)
       @name = name
       @enum_type = EnumType.new(type, values)
       @default = default
+      @allow_nil = allow_nil
     end
 
     def build(target)
@@ -57,7 +58,8 @@ module NumeritajTipo
     end
 
     def define_validation!(target)
-      target.validates_inclusion_of name, in: values_for_validation
+      target.validates_inclusion_of name, in: values_for_validation,
+        allow_nil: @allow_nil
     end
   end
 end

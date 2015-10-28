@@ -18,6 +18,7 @@ class MongoUser
   field :name, type: String
   enumerize :role, values: %i(admin user), default: :user
   enumerize :payment_status, type: 'PaymentStatus', default: :pending
+  enumerize :nullable, values: %i(some_value), allow_nil: true
 end
 
 Mongoid.logger = Logger.new(nil)
