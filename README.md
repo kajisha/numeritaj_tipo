@@ -97,7 +97,15 @@ User.user.count
 $ rails g enum Role admin user
 ```
 
-will generate enum classes under `app/enums`:
+will generate enum type under `app/enums`:
+
+* app/enums/role.rb:
+```ruby
+NumritajTipo.define_enum :Role, %i{
+  admin
+  user
+}
+```
 
 * using enum
 ```ruby
