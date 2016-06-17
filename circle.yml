@@ -6,10 +6,9 @@ machine:
 
 database:
   override:
-    - bundle exec rake neo4j:install\[community-2.3.0,development\]
+    - bundle exec rake neo4j:install\[community-3.0.3,development\]
     - bundle exec rake neo4j:config\[development,7475\]
-    - bundle exec rake neo4j:start_no_wait
-    - sleep 5
+    - bundle exec rake neo4j:start
 
 test:
   override:
