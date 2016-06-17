@@ -1,6 +1,7 @@
 # NumeritajTipo
 
 [![Code Climate](https://codeclimate.com/github/kajisha/numeritaj_tipo/badges/gpa.svg)](https://codeclimate.com/github/kajisha/numeritaj_tipo)
+[![Gem Version](https://badge.fury.io/rb/numeritaj_tipo.svg)](https://badge.fury.io/rb/numeritaj_tipo)
 
 NumeritajTipo is yet another enumeration types library. This library does not override any methods defined at ActiveRecord or Mongoid or Neo4jrb.
 
