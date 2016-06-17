@@ -3,6 +3,8 @@ machine:
     - mongodb
   ruby:
     version: 2.3.1
+  java:
+    version: oraclejdk8
 
 database:
   override:
