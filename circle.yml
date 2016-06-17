@@ -2,7 +2,7 @@ machine:
   services:
     - mongodb
   ruby:
-    version: 2.2.3
+    version: 2.3.1
 
 database:
   override:
