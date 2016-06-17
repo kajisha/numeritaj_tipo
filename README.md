@@ -2,7 +2,7 @@
 
 [![Code Climate](https://codeclimate.com/github/kajisha/numeritaj_tipo/badges/gpa.svg)](https://codeclimate.com/github/kajisha/numeritaj_tipo)
 
-NumeritajTipo is yet another enumeration types library. This library is not override any methods defined at ActiveRecord or Mongoid or Neo4jrb.
+NumeritajTipo is yet another enumeration types library. This library does not override any methods defined at ActiveRecord or Mongoid or Neo4jrb.
 
 ## Installation
 
